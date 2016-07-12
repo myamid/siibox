@@ -15,7 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import sii.com.siibox.ui.about.AboutFragment;
-import sii.com.siibox.ui.main.MainFragment;
+import sii.com.siibox.ui.home.HomeFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MainFragment mainFragment = new MainFragment();
+        HomeFragment homeFragment = new HomeFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, mainFragment);
+        fragmentTransaction.replace(R.id.fragment_container, homeFragment);
         fragmentTransaction.commit();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -93,8 +93,15 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_meetingroom) {
-            // Handle the camera action
+        if (id == R.id.nav_home) {
+
+            HomeFragment homeFragment = new HomeFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, homeFragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_meetingroom) {
+
         } else if (id == R.id.nav_chat) {
 
         } else if (id == R.id.nav_setting) {

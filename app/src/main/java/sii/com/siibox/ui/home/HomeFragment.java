@@ -1,4 +1,5 @@
-package sii.com.siibox.ui.main;
+package sii.com.siibox.ui.home;
+
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,17 +12,19 @@ import sii.com.siibox.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    public MainFragment() {
+
+    public HomeFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
 }
